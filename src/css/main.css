@@ -1,3 +1,34 @@
-h1 {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: .5rem;
+}
+
+.nav-link {
+    color :red;
+    text-decoration: none;
+}
+
+.products-container {
+    min-height: 30vh;
+    display: grid;
+    place-items: center;
 }
