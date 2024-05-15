@@ -2,12 +2,13 @@ import React from 'react'
 import { NavBar } from './NavBar'
 import { Carrito } from './Carrito'
 
-export const Header = () => {
+export const Header = (props) => {
+
   return (
-    <header className='header'>
+    <header className={props.modoColor === "oscuro" ? "header oscuro" : "header"}>
         <h1>CarpiShop</h1>
         <NavBar />
-        <Carrito />
+        <Carrito numerito={props.numerito} />
     </header>
   )
 }
