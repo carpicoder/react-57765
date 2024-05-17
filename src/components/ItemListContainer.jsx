@@ -1,42 +1,33 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import data from "../data/productos.json";
+import { ItemList } from './ItemList';
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
 
-  const parrafo = useRef();
-
-  let [numero, setNumero] = useState(1);
-
-  const cambiarParrafo = () => {
-    parrafo.current.innerHTML = "hola";
-    parrafo.current.classList.add("hola");
-    props.setModoColor("oscuro");
-    setNumero(numero + 1);
+  let [productos, setProductos] = useState([]);
+  
+  const pedirProductos = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(data);
+      }, 1000);
+    })
   }
 
-  let [pikachu, setPikachu] = useState(undefined);
-
   useEffect(() => {
+    
+    pedirProductos()
+      .then((res) => {
+        setProductos(res);
+      })
 
-    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-      .then(res => res.json())
-      .then(data => {
-        setPikachu(data);
-        console.log(pikachu);
-      });
-      
-  }, [])
+  }, []);
   
 
   return (
-    <div className="products-container">
-      {props.saludo}
-      {props.children}
-
-      <p ref={parrafo}>Párrafo de referencia</p>
-      <button onClick={cambiarParrafo}>Cambiar párrafo</button>
-      <p>{numero}</p>
-
-      <p>{pikachu ? pikachu.name : "todavía no llegó"}</p>
+    <div className="item-list-container">
+      <h1>Productos</h1>
+      <ItemList productos={productos} />
     </div>
   )
 }

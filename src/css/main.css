@@ -36,3 +36,20 @@
 .oscuro {
     background-color: black !important;
 }
+
+.item-list-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.productos-grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.producto {
+    background-color: pink;
+    border-radius: .5rem;
+    padding: 1rem;
+}

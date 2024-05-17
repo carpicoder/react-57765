@@ -5,7 +5,7 @@ import { Carrito } from './Carrito'
 export const Header = (props) => {
 
   return (
-    <header className={props.modoColor === "oscuro" ? "header oscuro" : "header"}>
+    <header className="header">
         <h1>CarpiShop</h1>
         <NavBar />
         <Carrito numerito={props.numerito} />

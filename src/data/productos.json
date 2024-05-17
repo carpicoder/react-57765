@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "nombre": "Camiseta Deportiva",
+        "precio": 19.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Camiseta ligera y transpirable, perfecta para hacer ejercicio."
+    },
+    {
+        "id": 2,
+        "nombre": "Zapatillas de Running",
+        "precio": 49.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Zapatillas con amortiguación avanzada para largas distancias."
+    },
+    {
+        "id": 3,
+        "nombre": "Mochila Escolar",
+        "precio": 24.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Mochila resistente y espaciosa, ideal para el día a día escolar."
+    },
+    {
+        "id": 4,
+        "nombre": "Auriculares Bluetooth",
+        "precio": 29.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Auriculares inalámbricos con sonido de alta calidad y batería de larga duración."
+    },
+    {
+        "id": 5,
+        "nombre": "Reloj Inteligente",
+        "precio": 79.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Reloj con monitoreo de salud y notificaciones inteligentes."
+    },
+    {
+        "id": 6,
+        "nombre": "Gafas de Sol",
+        "precio": 15.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Gafas con protección UV y diseño moderno."
+    },
+    {
+        "id": 7,
+        "nombre": "Bolígrafo de Lujo",
+        "precio": 9.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Bolígrafo elegante y duradero, perfecto para regalos."
+    },
+    {
+        "id": 8,
+        "nombre": "Cargador Inalámbrico",
+        "precio": 19.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Cargador rápido y eficiente compatible con la mayoría de los dispositivos."
+    },
+    {
+        "id": 9,
+        "nombre": "Termo de Acero Inoxidable",
+        "precio": 14.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Termo de alta calidad que mantiene las bebidas calientes o frías por horas."
+    },
+    {
+        "id": 10,
+        "nombre": "Libreta de Notas",
+        "precio": 7.99,
+        "imagen": "https://placeholder.pics/svg/150",
+        "descripcion": "Libreta con cubierta dura y papel de alta calidad."
+    }
+]
