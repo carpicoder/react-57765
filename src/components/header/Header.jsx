@@ -9,6 +9,7 @@ export const Header = (props) => {
         <h1>CarpiShop</h1>
         <NavBar />
         <Carrito numerito={props.numerito} />
+        <p>{props.children}</p>
     </header>
   )
 }

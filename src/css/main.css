@@ -4,12 +4,24 @@
     box-sizing: border-box;
 }
 
+:root {
+    color-scheme: light dark;
+}
+
 .header {
     background-color: pink;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .nav {
@@ -52,4 +64,15 @@
     background-color: pink;
     border-radius: .5rem;
     padding: 1rem;
+}
+
+.pokemons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.grid {
+    display: grid;
 }
