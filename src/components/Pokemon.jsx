@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom';
 
 const Pokemon = () => {
 
+    const { pokemonId } = useParams();
+
     const [pokemon, setPokemon] = useState();
-    const [pokemonId, setPokemonId] = useState(1);
 
     useEffect(() => {
         
@@ -11,17 +13,7 @@ const Pokemon = () => {
             .then(res => res.json())
             .then(data => setPokemon(data));
 
-    }, [pokemonId])
-
-    console.log(pokemonId);
-
-    const mostrarAnterior = () => {
-        pokemonId > 1 && setPokemonId(pokemonId - 1);
-    }
-
-    const mostrarSiguiente = () => {
-        pokemonId < 151 && setPokemonId(pokemonId + 1);
-    }
+    }, [])
     
 
   return (
@@ -29,8 +21,7 @@ const Pokemon = () => {
         <div>
             <img src={pokemon.sprites.front_default} />
             <h5>{pokemon.name}</h5>
-            <button onClick={mostrarAnterior}>Anterior</button>
-            <button onClick={mostrarSiguiente}>Siguiente</button>
+            <Link to="/">Volver a Inicio</Link>
         </div> 
         : "Cargando..."}</div>
   )

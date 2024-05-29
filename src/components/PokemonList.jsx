@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const PokemonList = () => {
 
@@ -29,7 +30,7 @@ const PokemonList = () => {
         <div>
             <div class="pokemons">
                 {pokemons.results.map(pokemon => {
-                    return <p key={pokemon.name}>{pokemon.name}</p>
+                    return <Link key={pokemon.name} to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
                 })}
             </div>
             <button onClick={mostrarAnteriores}>Anterior</button>

@@ -5,22 +5,25 @@ import "./css/main.css"
 import Pokemon from "./components/Pokemon";
 import PokemonList from "./components/PokemonList";
 import Counter from "./components/Counter";
-import Grilla from "./components/Grilla";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 
 function App() {
 
   const numerito = 1;
 
   return (
-    <>
-      <Header numerito={numerito}>
-        <p>Hola</p>
-      </Header>
-      {/*<ItemListContainer />*/}
-      {/* <PokemonList /> */}
-      {/* <Counter /> */}
-      <Grilla />
-    </>
+    <BrowserRouter>
+      <Header numerito={numerito} />
+      <Routes>
+        <Route path="/" element={<><PokemonList /></>}/>
+        <Route path="/productos" element={<ItemListContainer />} />
+        <Route path="/*" element={<NotFound />} />
+        <Route path="/pokemon/:pokemonId" element={<Pokemon />}/>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

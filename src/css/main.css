@@ -39,6 +39,11 @@
     text-decoration: none;
 }
 
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .products-container {
     min-height: 30vh;
     display: grid;
