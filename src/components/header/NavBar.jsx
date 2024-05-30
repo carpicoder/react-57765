@@ -8,16 +8,13 @@ export const NavBar = () => {
     <nav className="nav">
         <ul className="nav-menu">
             <li className="nav-item">
-              <NavLink to="/" activeClassName="active" className="nav-link">Inicio</NavLink>
+              <NavLink to="/" activeclassname="active" className="nav-link">Inicio</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/productos" activeClassName="active" className="nav-link">Productos</NavLink>
+              <NavLink to="/productos" activeclassname="active" className="nav-link">Productos</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Pantalones</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Camperas</a>
+              <NavLink to="/nosotros" activeclassname="active" className="nav-link">Nosotros</NavLink>
             </li>
         </ul>
     </nav>

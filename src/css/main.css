@@ -81,3 +81,7 @@
 .grid {
     display: grid;
 }
+
+footer {
+    margin-top: 30rem;
+}
