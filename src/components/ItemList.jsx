@@ -10,7 +10,7 @@ export const ItemList = ( {productos} ) => {
           productos.map(producto => {
             return <Item key={producto.id} producto={producto} />
           })
-          : <p>No hay productos</p>
+          : <p>Cargando productos...</p>
         }
     </div>
   )

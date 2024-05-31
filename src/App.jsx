@@ -1,20 +1,13 @@
-import { useState } from "react";
-import { ItemListContainer } from "./components/ItemListContainer"
-import { Header } from "./components/header/Header"
 import "./css/main.css"
-import Pokemon from "./components/Pokemon";
-import PokemonList from "./components/PokemonList";
-import Counter from "./components/Counter";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NotFound from "./components/NotFound";
+import { Header } from "./components/header/Header"
+import NotFound from "./components/NotFound"
+import { ItemListContainer } from "./components/ItemListContainer"
 import Footer from "./components/Footer";
-import Nosotros from "./components/Nosotros";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
-
-  const clickear = () => {
-      console.log("Hola, gente!");
-  }
 
   const [numerito, setNumerito] = useState(1);
 
@@ -22,11 +15,10 @@ function App() {
     <BrowserRouter>
       <Header numerito={numerito} setNumerito={setNumerito} />
       <Routes>
-        <Route path="/" element={<><PokemonList /></>}/>
-        <Route path="/productos" element={<ItemListContainer />} />
-        <Route path="/*" element={<NotFound />} />
-        <Route path="/pokemon/:pokemonId" element={<Pokemon />}/>
-        <Route path="/nosotros" element={<Nosotros clickear={clickear} />}/>
+        <Route path="/" element={<ItemListContainer />}/>
+        <Route path="/category/:categoryId" element={<ItemListContainer />}/>
+        <Route path="/item/:itemId" element={<ItemDetailContainer />}/>
+        <Route path="/*" element={<NotFound />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
