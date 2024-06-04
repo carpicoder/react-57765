@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import data from "../data/productos.json";
+import { ItemDetail } from './ItemDetail';
 
 const ItemDetailContainer = () => {
 
@@ -13,7 +14,7 @@ const ItemDetailContainer = () => {
     
 
   return (
-    <div>{producto ? producto.nombre : "Cargando..."}</div>
+    <div>{producto ? <ItemDetail producto={producto} /> : "Cargando..."}</div>
   )
 }
 
