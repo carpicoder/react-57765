@@ -7,15 +7,22 @@ const ItemDetailContainer = () => {
 
     let { itemId } = useParams();
     let [producto, setProducto] = useState(undefined);
+  
+    let error = false;
 
     useEffect(() => {
-        setProducto(data.find((prod) => prod.id === parseInt(itemId)));
-    }, [itemId])
-    
+        setTimeout(() => {
+          setProducto(data.find((prod) => prod.id === parseInt(itemId)));
+        }, 1000);
+    }, [itemId]);
 
-  return (
-    <div>{producto ? <ItemDetail producto={producto} /> : "Cargando..."}</div>
-  )
+    if (producto) {
+      return <ItemDetail producto={producto} />
+    } else if (error) {
+      return <div>Hubo un error</div>
+    } else {
+      return <div>Cargando...</div>
+    }
 }
 
 export default ItemDetailContainer

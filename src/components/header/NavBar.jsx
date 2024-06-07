@@ -21,6 +21,9 @@ export const NavBar = () => {
                   )
               })
             }
+            <li className="nav-item">
+              <NavLink to="/clases" activeclassname="active" className="nav-link">Clases condicionales</NavLink>
+            </li>
         </ul>
     </nav>
   )

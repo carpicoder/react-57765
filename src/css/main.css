@@ -89,3 +89,19 @@ footer {
 a {
     color: white;
 }
+
+.verde {
+    color: green;
+}
+
+.rojo {
+    color: red;
+}
+
+.bg-blanco {
+    background-color: white;
+}
+
+.bg-gris {
+    background-color: gray;
+}
