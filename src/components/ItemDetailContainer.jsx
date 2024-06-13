@@ -8,25 +8,27 @@ const ItemDetailContainer = () => {
 
     let { itemId } = useParams();
     let [producto, setProducto] = useState(undefined);
-  
-    let error = false;
+    let [loading, setLoading] = useState(true);
 
     useEffect(() => {
 
       const docRef = doc(db, "productos", itemId);
       getDoc(docRef)
         .then(res => {
-          setProducto( { ...res.data(), id: res.id } );
+          if (res.data()) {
+            setProducto( { ...res.data(), id: res.id } );
+          }
+          setLoading(false);
         })
       
     }, [itemId]);
 
-    if (producto) {
-      return <ItemDetail producto={producto} />
-    } else if (error) {
-      return <div>Hubo un error</div>
-    } else {
+    if (loading) {
       return <div>Cargando...</div>
+    } else if (producto) {
+      return <ItemDetail producto={producto} />
+    } else {
+      return <div>Producto no encontrado</div>
     }
 }
 
